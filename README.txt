@@ -1,4 +1,4 @@
-Merge Sort - Makefile
+MergeSort README.
 By: Mathew Shimko
 Student ID: 801273652
 
