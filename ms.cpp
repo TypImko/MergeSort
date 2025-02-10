@@ -59,20 +59,18 @@ void mergesort(int arr[], int left, int right){
     }
 }
 
-int main()
+int main(int argc, char* argv[])
 {
     //You can change this variable to either true to see the array when sorted and unsorted.
     bool viewArray = false;
     //I set the array to a pointer array of size 10^9, and allocate the memory in the same line.
     int * array = new int[1000000000];
-    int aSize = 0;
-    cout << "Set Array Size: " << endl;
-    cin >> aSize;
+    cout << "Set Array Size: " << stoi(argv[argc-1]) << endl;
     cout << "\nArray Size has been set" << endl;
     //Sets each value of the array to a random value.
     srand(time(0));
     array[0] = 1 + (rand() % 10000);
-    for(int i = 0; i < aSize; i++){
+    for(int i = 0; i < stoi(argv[argc-1]) ; i++){
         array[i] = 1 + (rand() % 10000);
         //Uncomment line below to test if each value is being set as intended.
         //cout << " " << array[i];
@@ -80,18 +78,18 @@ int main()
     cout << "\nFinnished setting every value of array to a random number." << endl;
     if(viewArray){
         cout << "Array (Unsorted): " << endl;
-        for(int i = 0; i < aSize; i++){
+        for(int i = 0; i < stoi(argv[argc-1]) ; i++){
             cout << array[i] << " ";
         }
     }
     //cout << aSize << endl;
     //vector<int> arrTest = {3,12,4,2,64,9,43,10,23,5,8,24};
     double sTime = time(NULL);
-    mergesort(array,0, aSize-1);
+    mergesort(array,0, stoi(argv[argc-1]) -1);
     double eTime = time(NULL);
     if(viewArray){
         cout << "Array (Sorted): " << endl;
-        for(int i = 0; i < aSize; i++){
+        for(int i = 0; i < stoi(argv[argc-1]) ; i++){
             cout << array[i] << " ";
         }
     }
