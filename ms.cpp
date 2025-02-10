@@ -6,9 +6,8 @@
 #include <ctime>
 
 using namespace std;
-void merge(int arr[], int left, int right, int mid){
+void merge(int arr[], int arrB[], int left, int right, int mid){
     //Code commented out is for debugging purposes, used the video linked in assignment as a reference.
-    int * arrB = new int[right + 1];
     int i = left;
     int k = left;
     int j = mid + 1;
@@ -43,28 +42,28 @@ void merge(int arr[], int left, int right, int mid){
     for(int i = left; i <= right; i++ ){
         arr[i] = arrB[i];
     }
-    delete [] arrB;
 
 }
 
 //alternate input: vector<int>&arr
-void mergesort(int arr[], int left, int right){
+void mergesort(int arr[],int arrB[],int left, int right){
     //cout << right << endl;
     if(left < right){
         //This checks to ensure the left and right values are valid.
         int mid = (left + right) / 2;
-        mergesort(arr,left,mid);
-        mergesort(arr,mid+1,right);
-        merge(arr,left,right,mid);
+        mergesort(arr,arrB,left,mid);
+        mergesort(arr,arrB,mid+1,right);
+        merge(arr,arrB,left,right,mid);
     }
 }
 
 int main(int argc, char* argv[])
 {
     //You can change this variable to either true to see the array when sorted and unsorted.
-    bool viewArray = false;
+    bool viewArray = true;
     //I set the array to a pointer array of size 10^9, and allocate the memory in the same line.
-    int * array = new int[10000000000];
+    int * array = new int[1000000000];
+    int * arrB = new int[1000000000];
     cout << "Set Array Size: " << stoi(argv[argc-1]) << endl;
     cout << "\nArray Size has been set" << endl;
     //Sets each value of the array to a random value.
@@ -85,7 +84,7 @@ int main(int argc, char* argv[])
     //cout << aSize << endl;
     //vector<int> arrTest = {3,12,4,2,64,9,43,10,23,5,8,24};
     double sTime = time(NULL);
-    mergesort(array,0, stoi(argv[argc-1]) -1);
+    mergesort(array,arrB,0, stoi(argv[argc-1]) -1);
     double eTime = time(NULL);
     if(viewArray){
         cout << "Array (Sorted): " << endl;
@@ -96,6 +95,6 @@ int main(int argc, char* argv[])
     cout << "\nArray has been sorted." << endl;
     cout << "\nTime taken to sort array: " << eTime - sTime << " seconds." << endl;
     delete [] array;
-
+    delete [] arrB;
     return 0;
 }
