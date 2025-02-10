@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
     //You can change this variable to either true to see the array when sorted and unsorted.
     bool viewArray = false;
     //I set the array to a pointer array of size 10^9, and allocate the memory in the same line.
-    int * array = new int[1000000000];
+    int * array = new int[10000000000];
     cout << "Set Array Size: " << stoi(argv[argc-1]) << endl;
     cout << "\nArray Size has been set" << endl;
     //Sets each value of the array to a random value.
