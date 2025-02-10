@@ -60,7 +60,7 @@ void mergesort(int arr[],int arrB[],int left, int right){
 int main(int argc, char* argv[])
 {
     //You can change this variable to either true to see the array when sorted and unsorted.
-    bool viewArray = true;
+    bool viewArray = false;
     //I set the array to a pointer array of size 10^9, and allocate the memory in the same line.
     int * array = new int[1000000000];
     int * arrB = new int[1000000000];
