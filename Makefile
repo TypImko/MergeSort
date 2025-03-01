@@ -1,2 +1,2 @@
-output: nb.cpp
+output: nbody.cpp
 	g++ nbody.cpp -o nb
