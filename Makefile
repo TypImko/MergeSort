@@ -1,2 +1,2 @@
-output: ms.cpp
-	g++ ms.cpp -o Merge
+output: nb.cpp
+	g++ nbody.cpp -o nb
