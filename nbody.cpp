@@ -191,9 +191,9 @@ int main(int argc, char* argv[]){
     double sTime = time(NULL);
     for(double i = 0; i < timeLoops; i += loopSize){
         calcForces(bodies, bodyCount);
-        std::cout << "Updating Velocity" << std::endl;
+        //std::cout << "Updating Velocity" << std::endl;
         updateVelocity(bodies, bodyCount, i);
-        std::cout << "Updating Positions" << std::endl;
+        //std::cout << "Updating Positions" << std::endl;
         updatePosition(bodies, bodyCount, i);
       
         if(i >= nextDump){
