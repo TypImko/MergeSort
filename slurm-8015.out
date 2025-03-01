@@ -1,0 +1,21 @@
+Particle Count: 8
+Loop Increments: 200
+Total Loops: 5000000
+Dumps Every 5000000 loops.
+Randomizing Particles...
+Starting calculations...
+Time Taken to simulate: 0 Seconds.
+Particle Count: 100
+Loop Increments: 1
+Total Loops: 10000
+Dumps Every 10000 loops.
+Randomizing Particles...
+Starting calculations...
+Time Taken to simulate: 12 Seconds.
+Particle Count: 1000
+Loop Increments: 1
+Total Loops: 10000
+Dumps Every 10000 loops.
+Randomizing Particles...
+Starting calculations...
+Time Taken to simulate: 1218 Seconds.
