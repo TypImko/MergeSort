@@ -102,7 +102,7 @@ void newRandomParticle(std::vector<particle>& P, size_t ID){
     P[ID].Position = {double(rand() % 1000000 + 1), ((double)(rand() % 10000000 + 1)), ((double)(rand() % 10000000 + 1))};
     P[ID].velocities = {double(rand() % 1000000 + 1), ((double)(rand() % 10000000 + 1)), ((double)(rand() % 10000000 + 1))};
     
-    std::cout << P[ID].mass << "     " 
+    /*td::cout << P[ID].mass << "     " 
     << P[ID].Position[0] << "     " 
     << P[ID].Position[1] << "     " 
     << P[ID].Position[2] << "     " 
@@ -111,7 +111,7 @@ void newRandomParticle(std::vector<particle>& P, size_t ID){
     << P[ID].forces[2] << "     " 
     << P[ID].velocities[0] << "     " 
     << P[ID].velocities[1] << "     " 
-    << P[ID].velocities[2] << "     ";
+    << P[ID].velocities[2] << "     ";*/
 }
 
 
